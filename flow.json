@@ -39,12 +39,13 @@
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
-        "console": false,
+        "console": true,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 400,
+        "x": 410,
         "y": 60,
         "wires": []
     }

@@ -2,11 +2,22 @@
 
 Open Horizon service container demonstrating Node-RED.
 
-This is an Open Horizon configuration to deploy an instance of the open-source [Node-RED](https://nodered.org) project. The Node-RED flow is designed to run in a web browser, so you will need to navigate to http://localhost:1880/ to use the software once it has been deployed.
+This is an Open Horizon configuration to deploy an instance of the open-source [Node-RED](https://nodered.org) project. The Node-RED flow is designed to run in a web browser, so you will need to navigate to <http://localhost:1880/> to use the software once it has been deployed.
 
 The Node-RED flow demonstrates a most simplistic Hello World flow.  This template could be used to deploy any Node-RED container to your edge devices.
 
 ![Node-RED flow Hello World](./Node-RED-helloworld-flow.png)
+
+As you add nodes to your flow, add the npm packages to the package.json (or, better, if you have enabled [Node-RED Projects](https://nodered.org/docs/user-guide/projects/) in your development Node-RED editor, use the Node-RED Projects settings to add the required dependencies)
+
+- From the right hand Node-RED menu, select `Projects` -> `Project Settings`
+- In the `Project Settings` panel, select the `Dependencies` tab
+- Click on `add to project` for nodes that should be added to the package.json file
+- Click on Close
+
+When you `make build` the container, the package.json will now include the npm packages / Node-RED nodes used in your flow.
+
+![Node-RED Projects dependencies](./Node-RED-Project-Dependencies.png)
 
 ## Prerequisites
 
@@ -73,9 +84,7 @@ The Makefile includes several targets to assist you in inspecting what is happen
 
 `make log` to see both the event logs and the service logs.
 
-`make check` to see the values in your environment variables and how they compare to the default values.  It will also show the service definition file with those values filled in.
-
-`make deploy-check` to see if the properties and contstraints that you've configured match each other to potentially form an agreement.
+`make deploy-check` to see if the properties and constraints that you've configured match each other to potentially form an agreement.
 
 `make browse` to see if the Node-RED Editor is responding.
 

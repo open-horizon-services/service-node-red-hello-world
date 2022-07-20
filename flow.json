@@ -1,1 +1,51 @@
-[]
+[
+    {
+        "id": "97404ee89b215714",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8aeeb4274faf8d63",
+        "type": "inject",
+        "z": "97404ee89b215714",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Welcome to the Hello World Open Horizon Node-RED service container!",
+        "payloadType": "str",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "39301b6aef9f8ef7"
+            ]
+        ]
+    },
+    {
+        "id": "39301b6aef9f8ef7",
+        "type": "debug",
+        "z": "97404ee89b215714",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    }
+]

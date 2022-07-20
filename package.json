@@ -1,8 +1,13 @@
 {
     "name": "service-node-red-hello-world",
-    "description": "A Node-RED Project",
-    "version": "0.0.1",
-    "dependencies": {},
+    "description": "Open Horizon service container demonstrating Node-RED",
+    "version": "1.0.0",
+    "dependencies": {
+        "node-red": "3.x"
+    },
+    "scripts": {
+        "start": "node $NODE_OPTIONS node_modules/node-red/red.js $FLOWS --userDir /opt/app-root/data"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",

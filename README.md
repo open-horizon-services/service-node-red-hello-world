@@ -17,7 +17,7 @@ As you add nodes to your flow, add the npm packages to the package.json (or, bet
 
 When you `make build` the container, the package.json will now include the npm packages / Node-RED nodes used in your flow.
 
-![Node-RED Projects dependencies](./Node-RED-Project-Dependencies.png)
+![Node-RED Projects dependencies](./Screenshots/Node-RED-Project-Dependencies.png)
 
 ## Prerequisites
 

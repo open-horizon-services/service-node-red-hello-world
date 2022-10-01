@@ -6,7 +6,7 @@ This is an Open Horizon configuration to deploy an instance of the open-source [
 
 The Node-RED flow demonstrates a most simplistic Hello World flow.  This template could be used to deploy any Node-RED container to your edge devices.
 
-![Node-RED flow Hello World](./Node-RED-helloworld-flow.png)
+![Node-RED flow Hello World](./Screenshots/Node-RED-helloworld-flow.png)
 
 As you add nodes to your flow, add the npm packages to the package.json (or, better, if you have enabled [Node-RED Projects](https://nodered.org/docs/user-guide/projects/) in your development Node-RED editor, use the Node-RED Projects settings to add the required dependencies)
 

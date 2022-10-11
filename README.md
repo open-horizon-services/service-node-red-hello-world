@@ -1,5 +1,7 @@
 # service-node-red-hello-world
 
+![Apache](https://img.shields.io/github/license/open-horizon-services/service-node-red-hello-world) ![AMD86](https://img.shields.io/badge/x86-yes-green) ![ARM64](https://img.shields.io/badge/arm64-yes-green) ![Contributors](https://img.shields.io/github/contributors/open-horizon-services/service-node-red-hello-world.svg)
+
 Open Horizon service container demonstrating Node-RED.
 
 This is an Open Horizon configuration to deploy an instance of the open-source [Node-RED](https://nodered.org) project. The Node-RED flow is designed to run in a web browser, so you will need to navigate to <http://localhost:1880/> to use the software once it has been deployed.
@@ -10,10 +12,10 @@ The Node-RED flow demonstrates a most simplistic Hello World flow.  This templat
 
 As you add nodes to your flow, add the npm packages to the package.json (or, better, if you have enabled [Node-RED Projects](https://nodered.org/docs/user-guide/projects/) in your development Node-RED editor, use the Node-RED Projects settings to add the required dependencies)
 
-- From the right hand Node-RED menu, select `Projects` -> `Project Settings`
-- In the `Project Settings` panel, select the `Dependencies` tab
-- Click on `add to project` for nodes that should be added to the package.json file
-- Click on Close
+* From the right hand Node-RED menu, select `Projects` -> `Project Settings`
+* In the `Project Settings` panel, select the `Dependencies` tab
+* Click on `add to project` for nodes that should be added to the package.json file
+* Click on Close
 
 When you `make build` the container, the package.json will now include the npm packages / Node-RED nodes used in your flow.
 

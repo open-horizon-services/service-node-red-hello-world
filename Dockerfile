@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9:9.0.0-1690 as build
+FROM registry.access.redhat.com/ubi9:9.1.0-1646 as build
 LABEL stage=builder
 
 RUN dnf install --nodocs -y nodejs nodejs-nodemon npm --setopt=install_weak_deps=0 --disableplugin=subscription-manager \
@@ -20,8 +20,8 @@ COPY ./flow_cred.json /opt/app-root/data/flows_cred.json
 RUN chown -R 1000:1000 .
 
 ## Release image
-#FROM registry.access.redhat.com/ubi9/nodejs-16-minimal:1-67
-FROM registry.access.redhat.com/ubi9/ubi-minimal:9.0.0-1687 
+# FROM registry.access.redhat.com/ubi9/nodejs-18-minimal:1-18
+FROM registry.access.redhat.com/ubi9/ubi-minimal:9.1.0-1656
 
 USER 0
 #RUN microdnf update -y --nodocs --disableplugin=subscription-manager --setopt=install_weak_deps=0 && \

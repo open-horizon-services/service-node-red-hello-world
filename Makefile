@@ -29,8 +29,8 @@ init:
 build:
 # build arm64 container on x86_64 host machine and push to DockerHub
 # NOTE: takes about 15 minutes to build on MacBook Pro
-	@docker build --platform linux/arm64 -t $(CONTAINER_IMAGE_BASE)_arm64:$(CONTAINER_IMAGE_VERSION) -f ./Dockerfile
-	@docker build --platform linux/amd64 -t $(CONTAINER_IMAGE_BASE)_amd64:$(CONTAINER_IMAGE_VERSION) -f ./Dockerfile
+	@docker build --platform linux/arm64 -t $(CONTAINER_IMAGE_BASE)_arm64:$(CONTAINER_IMAGE_VERSION) -f ./Dockerfile .
+	@docker build --platform linux/amd64 -t $(CONTAINER_IMAGE_BASE)_amd64:$(CONTAINER_IMAGE_VERSION) -f ./Dockerfile .
 	@docker image prune --filter label=stage=builder --force
 
 push:
